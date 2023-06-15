@@ -1,0 +1,19 @@
+银行管理系统
+
+功能列表:
+1储存金钱
+2提取金钱
+3查看金钱
+
+数据结构:
+-系统指定: SYS
+-用户指定: USER
+
+用户:
+    id_card (卡号) SYS
+    deposit (存款) SYS/USER
+    user_name (用户名) USER
+    password (用户密码) USER
+    create_at (用户的创建时间) SYS
+    phone_number (用户手机号) USER
+    bank_name (所属银行) SYS/USER
