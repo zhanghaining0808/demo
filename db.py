@@ -27,34 +27,34 @@ def init_db():
 
     connecter.execute(create_table_sql)
 
-    add_user_sql = """
-    INSERT INTO 
-    bankuser(
-        id_card,      
-        deposit,
-        user_name,
-        password, 
-        create_at,
-        phone_number,
-        bank_name
-    ) 
-    values(
-        '2535708702',
-        50000.0,
-        'zhanghaining',
-        253570,
-        202306170042,
-        15216138606,
-        '农业银行'
-    );
-    """
-    try:
-        connecter.execute(add_user_sql)
-        # 提交到数据库执行
-        connect.commit()
-        print("用户添加成功")
-    except:
-        connect.rollback()
-        print("用户添加失败")
+    # add_user_sql = """
+    # INSERT INTO 
+    # bankuser(
+    #     id_card,      
+    #     deposit,
+    #     user_name,
+    #     password, 
+    #     create_at,
+    #     phone_number,
+    #     bank_name
+    # ) 
+    # values(
+    #     '2535708702',
+    #     50000.0,
+    #     'zhanghaining',
+    #     253570,
+    #     202306170042,
+    #     15216138606,
+    #     '农业银行'
+    # );
+    # """
+    # try:
+    #     connecter.execute(add_user_sql)
+    #     # 提交到数据库执行
+    #     connect.commit()
+    #     print("用户添加成功")
+    # except:
+    #     connect.rollback()
+    #     print("用户添加失败")
 
     connect.close()
