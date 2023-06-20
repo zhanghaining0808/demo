@@ -7,3 +7,6 @@ pip3 install -r dependencies.txt
 ```base
 python main.py
 ```
+
+
+# 可能发生的错误有以下
