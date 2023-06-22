@@ -1,6 +1,8 @@
 import questionary
-from service.add import add_deposit
-from service.add import add_user
+from service.add import (
+        add_deposit,
+        add_user
+    )
 from service.update import update_deposit
 from service.get import get_deposit
 

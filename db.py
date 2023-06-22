@@ -16,7 +16,7 @@ def init_db():
             deposit FLOAT NOT NULL,
             user_name TEXT NOT NULL,
             password INT NOT NULL, 
-            create_at BIGINT NOT NULL,
+            created_at BIGINT NOT NULL,
             phone_number BIGINT NOT NULL,
             bank_name enum('工商银行','农业银行','交通银行','建设银行')
         ) engine=InnoDB charset=utf8;
