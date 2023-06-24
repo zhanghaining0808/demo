@@ -23,7 +23,7 @@ def init_db():
         """
         connecter.execute(create_table_sql)
         print("数据表已生成")
-        connect.close()
+        return connect
     except pymysql.DatabaseError as e:
         print(f"数据库连接失败:{e}")
         exit(1)

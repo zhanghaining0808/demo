@@ -13,6 +13,6 @@ options = {
     "查看存款":get_deposit,
 }
 
-def show_menu():
+def show_menu(connect):
     selected = questionary.select("请选择以下功能:",options).ask()
-    options.get(selected)()
+    options.get(selected)(connect)
