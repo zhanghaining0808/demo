@@ -15,7 +15,7 @@
 -用户指定: USER
 
 用户:
-    id_card (卡号) SYS
+    bank_code (卡号) SYS
     deposit (存款) SYS/USER
     user_name (用户名) USER
     password (用户密码) USER

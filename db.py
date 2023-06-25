@@ -12,7 +12,7 @@ def init_db():
         CREATE TABLE IF NOT EXISTS bankuser
         (
             id INT PRIMARY KEY AUTO_INCREMENT,
-            id_card TEXT NOT NULL,    
+            bank_code TEXT NOT NULL,    
             deposit FLOAT NOT NULL,
             user_name TEXT NOT NULL,
             password INT NOT NULL, 

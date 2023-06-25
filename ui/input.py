@@ -1,13 +1,14 @@
 import questionary
 
+
 def input_password(message):
     try:
         password = int(questionary.password(message).ask())
         if password < 100000 or password > 999999:
             raise ValueError("Invalid password")
-        
+
         return password
-        
+
     except ValueError:
         print("密码格式不正确请重新输入")
         exit(1)
@@ -15,12 +16,31 @@ def input_password(message):
 
 def input_phone_number(message):
     try:
-        phone_number=int(questionary.text(message).ask())
+        phone_number = int(questionary.text(message).ask())
         if phone_number < 1000000000 or phone_number > 999999999999:
             raise ValueError("Invalid phone_number")
-       
+
         return phone_number
-    
+
     except ValueError:
         print("输入的手机号格式错误!请重新输入")
+        exit(1)
+
+
+def input_user_name(message):
+    try:
+        user_name = questionary.text(message).ask()
+
+        # 判断是否符合长度
+        if len(user_name) < 3 or len(user_name) > 10:
+            raise ValueError("Invalid user_name")
+
+        # 判断是否为全中文
+        for word in user_name:
+            if not "\u4e00" <= word <= "\u9fa5":
+                raise ValueError("Invalid user_name")
+
+        return user_name
+    except ValueError:
+        print("用户名格式错误!请重新输入")
         exit(1)

@@ -1,7 +1,9 @@
 import time
 
+
 def generate_stamp():
     return int(time.time())
+
 
 def convert_stamp(stamp):
     timeArray = time.localtime(stamp)
