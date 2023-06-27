@@ -1,10 +1,11 @@
 import questionary
 from service.add import add_deposit, add_user
 from service.update import update_deposit
-from service.get import get_deposit
+from service.get import user_login, get_deposit
 
 options = {
     "注册账号": add_user,
+    "登录账号": user_login,
     "存入存款": add_deposit,
     "取出存款": update_deposit,
     "查看存款": get_deposit,

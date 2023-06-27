@@ -8,6 +8,8 @@ def init_db():
         )
         connecter = connect.cursor()
         print("数据库连接成功")
+        # PRIMARY KEY 唯一值 AUTO_INCREMENT 自增
+        # enum 选择其中一项 engine 引擎 charset 字符集
         create_table_sql = """
         CREATE TABLE IF NOT EXISTS bankuser
         (

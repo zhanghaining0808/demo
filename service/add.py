@@ -13,7 +13,7 @@ def add_user(connect):
     user_name = input_user_name("你的用户名字(3至10个字之间,全中文):")
     user_pwd = input_password("你的密码(6位数字):")
     user_phone_number = input_phone_number("你的手机号(11位):")
-    user_deposit = "0.0"
+    user_deposit = 0.0
 
     create_user_sql = f"""
     INSERT INTO bankuser 

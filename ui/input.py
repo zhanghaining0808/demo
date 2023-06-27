@@ -29,18 +29,31 @@ def input_phone_number(message):
 
 def input_user_name(message):
     try:
-        user_name = questionary.text(message).ask()
+        name = questionary.text(message).ask()
 
         # 判断是否符合长度
-        if len(user_name) < 3 or len(user_name) > 10:
-            raise ValueError("Invalid user_name")
+        if len(name) < 3 or len(name) > 10:
+            raise ValueError("Invalid name")
 
         # 判断是否为全中文
-        for word in user_name:
+        for word in name:
             if not "\u4e00" <= word <= "\u9fa5":
-                raise ValueError("Invalid user_name")
+                raise ValueError("Invalid name")
 
-        return user_name
+        return name
     except ValueError:
         print("用户名格式错误!请重新输入")
+        exit(1)
+
+
+def input_bank_code(message):
+    try:
+        bank_code = int(questionary.text(message).ask())
+        bank_code = str(bank_code)
+        if len(bank_code) < 17 or len(bank_code) > 19:
+            raise ValueError("Invalid bank_code")
+
+        return bank_code
+    except ValueError:
+        print("银行卡格式错误!请重新输入")
         exit(1)
