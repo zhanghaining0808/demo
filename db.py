@@ -15,7 +15,7 @@ def init_db():
         (
             id INT PRIMARY KEY AUTO_INCREMENT,
             bank_code TEXT NOT NULL,    
-            deposit FLOAT NOT NULL,
+            deposit DOUBLE NOT NULL,
             user_name TEXT NOT NULL,
             password INT NOT NULL, 
             created_at BIGINT NOT NULL,
