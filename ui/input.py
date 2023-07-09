@@ -57,3 +57,16 @@ def input_bank_code(message):
     except ValueError:
         print("银行卡格式错误!请重新输入")
         exit(1)
+
+
+def input_deposit(message):
+    try:
+        deposit = float(questionary.text(message).ask())
+        MAX_INSERT = 50000
+
+        if deposit > MAX_INSERT:
+            raise ValueError("Invalid deposit")
+        return deposit
+    except ValueError:
+        print("存款格式错误!请重新输入")
+        exit(1)

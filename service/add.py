@@ -49,7 +49,3 @@ def add_user(connect):
         print(f"添加用户失败:{e}")
         connect.rollback()
         exit(1)
-
-
-def add_deposit():
-    pass

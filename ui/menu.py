@@ -1,6 +1,6 @@
 import questionary
-from service.add import add_deposit, add_user
-from service.update import update_deposit
+from service.add import add_user
+from service.update import store_deposit, take_deposit
 from service.get import user_login, get_deposit
 
 primary_options = {
@@ -10,8 +10,8 @@ primary_options = {
 }
 
 user_options = {
-    "存入存款": add_deposit,
-    "取出存款": update_deposit,
+    "存入存款": store_deposit,
+    "取出存款": take_deposit,
     "查看存款": get_deposit,
     "退出程序": exit,
 }
