@@ -65,8 +65,13 @@ def input_deposit(message):
         MAX_INSERT = 50000
 
         if deposit > MAX_INSERT:
-            raise ValueError("Invalid deposit")
+            raise OverflowError("Invalid deposit")
+
         return deposit
     except ValueError:
         print("存款格式错误!请重新输入")
+        exit(1)
+
+    except OverflowError:
+        print("金额过大!请重新输入")
         exit(1)
